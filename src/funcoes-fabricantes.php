@@ -5,7 +5,7 @@ require_once "conecta.php";
 
 // Usada em fabricantes/visualizar.php
 function lerFabricantes(PDO $conexao){
-    $sql =  "SELECT * FROM fabricantes ORDER BY nome";
+    $sql =  "SELECT * FROM fabricantes ORDER BY id";
 
     try {
         

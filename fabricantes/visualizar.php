@@ -28,21 +28,18 @@ $listaDeFabricantes = lerFabricantes($conexao);
         </thead>
 
         <tbody>
-            <tr>
             <?php foreach ($listaDeFabricantes as $fabricante) { ?>
-    
-                </tr>
+            <tr>
                 <td><?=$fabricante["id"]?></td>
                 <td><?=$fabricante["nome"]?></td>
                 <td>
                     <a href="">Editar</a>
                     <a href="">Excluir</a>
                 </td>
-    
-                <?php ;}?>
             </tr>
+            <?php ;}?>
         </tbody>
-</table>
+    </table>
 
 </body>
 </html>
