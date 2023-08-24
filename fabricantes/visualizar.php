@@ -1,3 +1,4 @@
+<?php require_once "src/funcoes-fabricantes.php"?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
