@@ -28,5 +28,5 @@ function lerFabricantes(PDO $conexao){
    return $resultado;
 }
 
-$dados = lerFabricantes($conexao);
-var_dump($dados);
+// $dados = lerFabricantes($conexao);
+// var_dump($dados);
