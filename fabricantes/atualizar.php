@@ -1,8 +1,12 @@
 <?php 
+require_once "../src/funcoes-fabricantes.php";
+
 // Obtendo e sanatizando o valor vindo do parametro de url (link dinamico)
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-echo $id;
+
+$fabricante = lerUmFabricante($conexao, $id);
 ?>
+
 
 
 <!DOCTYPE html>
@@ -18,9 +22,12 @@ echo $id;
     <hr>
 
     <form action="" method="post">
+        
+    <!-- Compo oculto usado apenas para registro no formulário do id do fabricante que está sendo visualuizado -->
+        <input type="hidden" name="id" value="<?=$fabricante['id']?>">
         <p>
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required>
+            <input value="<?=$fabricante['nome']?>" type="text" name="nome" id="nome" required>
         </p>
         <button type="submit" name="atualizar">Atualizar fabricantes</button>
     </form>
