@@ -24,6 +24,7 @@ if( isset($_POST['inserir']) ){
     <title>Fabricantes - Inserção</title>
 </head>
 <body>
+    <p><a href="../index.php">Home</a></p>
     <h1>Fabricantes | Insert</h1>
     <hr>
 
@@ -34,6 +35,7 @@ if( isset($_POST['inserir']) ){
         </p>
         <button type="submit" name="inserir">Inserir fabricantes</button>
     </form>
+    <p><a href="visualizar.php">Voltar</a></p>
 
 </body>
 </html>
