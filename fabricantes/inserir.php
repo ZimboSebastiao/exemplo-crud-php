@@ -1,9 +1,13 @@
 <?php 
 
-
 if( isset($_POST['inserir']) ){
+    // Importando as funções e conexão
+    require_once "../src/funcoes-fabricantes.php";
+
     // Capturando o valor digitado do nome e sanatizando
     $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    inserirFabricante($conexao, $nome); 
     
 }
 
