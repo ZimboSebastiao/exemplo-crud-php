@@ -1,7 +1,7 @@
 <?php require_once "../src/funcoes-fabricantes.php";
 $listaDeFabricantes = lerFabricantes($conexao);
+$quantidade = count($listaDeFabricantes);
 ?>
-<!-- <pre><?=var_dump($listaDeFabricantes)?></pre> -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +18,7 @@ $listaDeFabricantes = lerFabricantes($conexao);
     <p><a href="inserir.php">Inserir novo fabricante</a></p>
 
     <table>
-        <caption>Lista de Fabricantes</caption>
+        <caption>Lista de Fabricantes: <b><?=$quantidade?></b> </caption>
         <thead>
             <tr>
                 <th>ID</th>
