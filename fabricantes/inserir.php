@@ -7,7 +7,11 @@ if( isset($_POST['inserir']) ){
     // Capturando o valor digitado do nome e sanatizando
     $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
 
+    // Chamar a função, passar os dados de conexão e o dado (nome fabricante) digitado no formulário
     inserirFabricante($conexao, $nome); 
+
+    // Redirecionamento
+    header("location:visualizar.php");
     
 }
 
