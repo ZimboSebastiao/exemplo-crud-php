@@ -8,14 +8,14 @@
      <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- ======== HEADER ========= -->
     
+    <!-- ======== HEADER ========= -->
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="#">
                 <img src="img/palanc.png" 
-                width="90" height="84">
+                width="70" height="64">
 
                 </a>
             </div>
@@ -61,7 +61,7 @@
         </div>
         </div>
     </div>
-    
+
     </main>
 
 

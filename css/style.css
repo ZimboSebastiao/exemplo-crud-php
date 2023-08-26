@@ -1,7 +1,7 @@
 
 
 .estilo {
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     padding: 12px;
     border-radius: 14px;
 }
@@ -20,3 +20,35 @@
 .contneir {
     background-color:  #007bff;
 }
+
+/* ======= FABRICANTES ======== */
+
+.botao {
+   position: relative;
+   left: 1000px;
+   top: -44px;
+    
+}
+
+/* ======= VISUALIZAR ======== */
+
+
+.table {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+
+
+
+  .table-dark thead {
+    color: #fff;
+    background-color: #0875e2; 
+  }
+  
+
+  
+
+
+  

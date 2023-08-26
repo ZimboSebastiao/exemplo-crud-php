@@ -8,43 +8,68 @@ $quantidade = count($listaDeFabricantes);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabricantes - Visualização</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <p><a href="../index.php">Home</a></p>
-    <hr>
-    <h1>Fabricantes | Select</h1>
-    <hr>
-    <h2>Lendo e carregando todos os fabricantes.</h2>
-    <p><a href="inserir.php">Inserir novo fabricante</a></p>
 
-    <table>
-        <caption>Lista de Fabricantes: <b><?=$quantidade?></b> </caption>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Operações</th> 
-            </tr>
-        </thead>
+    <!-- ======== HEADER ========= -->
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="../index.php">
+                <img src="../img/palanc.png" 
+                width="70" height="64">
 
-        <tbody>
+                </a>
+            </div>
+        </nav>
+    </header> <!-- FIM HEADER  -->
+
+    <main>
+
+        <div class="container-xxl contneir">
+            <br>
+            <div class="container estilo">
+                <p class="hero">Cadastro/Novo Fabricante</p>
+                <h2>Sistema Vendas - Fabricantes</h2>
+                <a class="navbar-brand btn btn-outline-secondary botao" role="button" aria-disabled="true" href="inserir.php"> <img src="../img/botao-adicionar.png" width="20" height="21" alt="">  Adicionar</a>
+            </div>
+            <br>
+        </div>
+        <br>
+
+        <!-- ======== TABELA ========= -->
+        <table class="table table-sm">
+            <thead class="table-dark">
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Operações</th>
+                </tr>
+            </thead>
+          <tbody>
             <?php foreach ($listaDeFabricantes as $fabricante) { ?>
-            <tr>
-                <td><?=$fabricante["id"]?></td>
-                <td><?=$fabricante["nome"]?></td>
-                <td>
+                <tr>
+                    <td><?=$fabricante["id"]?></td>
+                    <td><?=$fabricante["nome"]?></td>
+                    <td>
+        
+                        <!-- 
+                            Link DINÁMICO
+                            A URL do href precisa de parâmetro com dados dinâmicos (no caso, o ID de cada fabricante)
+                        -->
+                        <a href="atualizar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">Editar</a>
+                        <a href="">Excluir</a>
+                    </td>
+                </tr>
+                <?php ;}?>
+            </tbody>
+        </table> <!-- FIM TABELA  -->
 
-                    <!-- 
-                        Link DINÁMICO
-                        A URL do href precisa de parâmetro com dados dinâmicos (no caso, o ID de cada fabricante)
-                     -->
-                    <a href="atualizar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">Editar</a>
-                    <a href="">Excluir</a>
-                </td>
-            </tr>
-            <?php ;}?>
-        </tbody>
-    </table>
+    </main>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
