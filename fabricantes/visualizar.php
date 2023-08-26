@@ -33,16 +33,16 @@ $quantidade = count($listaDeFabricantes);
             <div class="container estilo">
                 <p class="hero">Cadastro/Novo Fabricante</p>
                 <h2>Sistema Vendas - Fabricantes</h2>
-                <a class="navbar-brand btn btn-outline-secondary botao" role="button" aria-disabled="true" href="inserir.php"> <img src="../img/botao-adicionar.png" width="20" height="21" alt="">  Adicionar</a>
+                <a class="navbar-brand btn btn-outline-secondary botao" role="button" aria-disabled="true" href="inserir.php"> <img src="../img/botao-adicionar.png" width="28" height="27" alt="">  Adicionar</a>
             </div>
             <br>
         </div>
         <br>
 
         <!-- ======== TABELA ========= -->
-        <table class="table table-sm">
-            <thead class="table-dark">
-                <tr>
+        <table class="table">
+            <thead>
+                <tr class="table-light">
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Operações</th>
@@ -59,8 +59,17 @@ $quantidade = count($listaDeFabricantes);
                             Link DINÁMICO
                             A URL do href precisa de parâmetro com dados dinâmicos (no caso, o ID de cada fabricante)
                         -->
-                        <a href="atualizar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">Editar</a>
-                        <a href="">Excluir</a>
+
+                        <!-- ===== Editar ====== -->
+                        <a class="navbar-brand btn btn-outline-secondary" role="button"   aria-disabled="true" href="atualizar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">
+                        <img src="../img/editar.png" width="16" height="15" alt="">
+                        Editar</a>
+
+                          
+                        <!-- ===== Excluir ====== -->
+                        <a class="navbar-brand btn btn-outline-secondary" role="button" aria-disabled="true" href="#">
+                        <img src="../img/excluir.png" width="16" height="15" alt="">
+                            Apagar</a>
                     </td>
                 </tr>
                 <?php ;}?>

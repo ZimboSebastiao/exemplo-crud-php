@@ -34,21 +34,26 @@
 
 
 .table {
-    width: 85%;
+    width: 55%;
     margin: auto;
     margin-bottom: 1rem;
     background-color: transparent;
   }
 
 
+.table-light,
+.table-light > th,
+.table-light > td {
+    background-color: #007bff;
+    color: white;
+    
+}
 
-  .table-dark thead {
-    color: #fff;
-    background-color: #0875e2; 
-  }
-  
+.table-light th,
+.table-light td,
+.table-light thead th,
+.table-light tbody + tbody {
+      border-color:#007bff;
+}
+    
 
-  
-
-
-  
