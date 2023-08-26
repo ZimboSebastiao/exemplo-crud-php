@@ -1,0 +1,22 @@
+
+
+.estilo {
+    background-color: #f3f3f3;
+    padding: 12px;
+    border-radius: 14px;
+}
+
+.hero {
+    font-size: 12px;
+    left: -5px;
+    top: -5px;
+    position: relative;
+}
+
+.format {
+    text-align: center;
+}
+
+.contneir {
+    background-color:  #007bff;
+}
