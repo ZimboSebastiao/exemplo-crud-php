@@ -16,7 +16,6 @@
                 <a class="navbar-brand" href="#">
                 <img src="img/palanc.png" 
                 width="70" height="64">
-
                 </a>
             </div>
         </nav>
@@ -36,7 +35,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h4>Escolha o que deseja gerenciar</h4>
+            <h4>Categorias de Gereciamento</h4>
         </div>
         <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>
@@ -46,7 +45,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    Opções
+                    Categorias Disponível
                 </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">

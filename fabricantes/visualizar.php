@@ -20,7 +20,6 @@ $quantidade = count($listaDeFabricantes);
                 <a class="navbar-brand" href="../index.php">
                 <img src="../img/palanc.png" 
                 width="70" height="64">
-
                 </a>
             </div>
         </nav>
@@ -30,10 +29,11 @@ $quantidade = count($listaDeFabricantes);
 
         <div class="container-xxl contneir">
             <br>
+            <p class="navbar-brand btn btn-outline-secondary quanti" role="button" aria-disabled="true">Quantidade (<?=$quantidade?>) </p>
             <div class="container estilo">
                 <p class="hero">Cadastro/Novo Fabricante</p>
-                <h2>Sistema Vendas - Fabricantes</h2>
-                <a class="navbar-brand btn btn-outline-secondary botao" role="button" aria-disabled="true" href="inserir.php"> <img src="../img/botao-adicionar.png" width="28" height="27" alt="">  Adicionar</a>
+                <h3>Sistema Vendas - Fabricantes</h3>
+                <a class="navbar-brand btn btn-outline-secondary botao" role="button" aria-disabled="true" href="inserir.php"> <img src="../img/adicionar2.png" width="28" height="27" alt="">  Adicionar</a>
             </div>
             <br>
         </div>
@@ -51,8 +51,8 @@ $quantidade = count($listaDeFabricantes);
           <tbody>
             <?php foreach ($listaDeFabricantes as $fabricante) { ?>
                 <tr>
-                    <td><?=$fabricante["id"]?></td>
-                    <td><?=$fabricante["nome"]?></td>
+                    <td class="tdformat"><?=$fabricante["id"]?></td>
+                    <td class="tdformat"><?=$fabricante["nome"]?></td>
                     <td>
         
                         <!-- 
@@ -61,13 +61,13 @@ $quantidade = count($listaDeFabricantes);
                         -->
 
                         <!-- ===== Editar ====== -->
-                        <a class="navbar-brand btn btn-outline-secondary" role="button"   aria-disabled="true" href="atualizar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">
+                        <a class="navbar-brand btn btn-outline-secondary editar" role="button"   aria-disabled="true" href="atualizar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">
                         <img src="../img/editar.png" width="16" height="15" alt="">
                         Editar</a>
 
                           
                         <!-- ===== Excluir ====== -->
-                        <a class="navbar-brand btn btn-outline-secondary" role="button" aria-disabled="true" href="#">
+                        <a class="navbar-brand btn btn-outline-secondary apagar" role="button" aria-disabled="true" href="#">
                         <img src="../img/excluir.png" width="16" height="15" alt="">
                             Apagar</a>
                     </td>

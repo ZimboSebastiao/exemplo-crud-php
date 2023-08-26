@@ -1,4 +1,7 @@
-
+body {
+    color: #a16941;
+}
+.tdformat {color: #aa7149;}
 
 .estilo {
     background-color: #ffffff;
@@ -27,7 +30,14 @@
    position: relative;
    left: 1000px;
    top: -44px;
-    
+   color: #007bff;
+   border: 1px solid #007bff;
+}
+
+.botao:hover {
+    color: white;
+    background-color: #096cd6;
+    border: 1px solid white;
 }
 
 /* ======= VISUALIZAR ======== */
@@ -38,7 +48,7 @@
     margin: auto;
     margin-bottom: 1rem;
     background-color: transparent;
-  }
+}
 
 
 .table-light,
@@ -56,4 +66,35 @@
       border-color:#007bff;
 }
     
+.quanti {
+    color: white;
+    position: relative;
+    left: 1000px;
+    border: 1px solid white;
+}
+
+.quanti:hover {
+    color: #007bff;
+    background-color: white;
+}
+
+.editar {
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.editar:hover {
+    color: white;
+    background-color: #096cd6;
+}
+
+.apagar {
+    color: red;
+    border: 1px solid red;
+}
+.apagar:hover {
+    color: white;
+    background-color: rgb(233, 22, 22);
+}
+
 
