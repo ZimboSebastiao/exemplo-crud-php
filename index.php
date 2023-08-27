@@ -35,11 +35,9 @@
 
     <div class="card">
         <div class="card-header">
-            <h4>Categorias de Gereciamento</h4>
+            <h4>Categorias disponíveis para Gereciamento</h4>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
