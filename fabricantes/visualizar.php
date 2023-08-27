@@ -29,7 +29,14 @@ $quantidade = count($listaDeFabricantes);
 
         <div class="container-xxl contneir">
             <br>
-            <p class="navbar-brand btn btn-outline-secondary quanti" role="button" aria-disabled="true">Quantidade (<?=$quantidade?>) </p>
+            <p class="navbar-brand btn btn-outline-secondary quanti" role="button" aria-disabled="true">
+            <img src="../img/caixas.png" width="28" height="27" alt="">
+            Quantidade (<?=$quantidade?>) 
+            </p>
+
+            <!-- <button type="button" class="btn btn-primary">
+            Notifications <span class="badge text-bg-secondary">4</span>
+            </button> -->
             <div class="container estilo">
                 <p class="hero">Cadastro/Novo Fabricante</p>
                 <h3>Sistema Vendas - Fabricantes</h3>

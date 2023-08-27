@@ -22,20 +22,48 @@ if( isset($_POST['inserir']) ){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabricantes - Inserção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <p><a href="../index.php">Home</a></p>
-    <h1>Fabricantes | Insert</h1>
-    <hr>
+        <!-- ======== HEADER ========= -->
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="../index.php">
+                <img src="../img/palanc.png" 
+                width="70" height="64">
+                </a>
+            </div>
+        </nav>
+    </header> <!-- FIM HEADER  -->
 
-    <form action="" method="post">
-        <p>
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" required>
-        </p>
-        <button type="submit" name="inserir">Inserir fabricantes</button>
-    </form>
-    <p><a href="visualizar.php">Voltar</a></p>
+    <main>
+        <div class="container-xxl contneir">
+                <br>
+                <div class="container estilo">
+                    <p class="hero">Adicionar/Novo Fabricante</p>
+                    <h3 class="adic">Adicionar Fabricante</h3>
+                </div>
+                <br>
+            </div>
+            <br>
 
+            <form action="" method="post">
+
+                <div class="input-group mb-3">
+                    <input type="text" name="nome" id="nome" required class="form-control" placeholder="Nome do Fabricante" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2" name="inserir">Inserir Fabricante</button>
+                </div>
+            </form>
+            <p>
+                <a href="visualizar.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Página Anterior</a>
+            </p>
+    </main>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
