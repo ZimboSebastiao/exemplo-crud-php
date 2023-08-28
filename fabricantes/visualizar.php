@@ -82,7 +82,7 @@ $quantidade = count($listaDeFabricantes);
 
                           
                         <!-- ===== Excluir ====== -->
-                        <a class="navbar-brand btn btn-outline-secondary apagar" role="button" aria-disabled="true" href="deletar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">
+                        <a class="navbar-brand btn btn-outline-secondary apagar excluir" role="button" aria-disabled="true" href="deletar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">
                         <img src="../img/excluir.png" width="16" height="15" alt="">
                             Apagar</a>
                     </td>
@@ -95,5 +95,6 @@ $quantidade = count($listaDeFabricantes);
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="../js/confirma-exclusao.js"></script>
 </body>
 </html>
