@@ -50,7 +50,7 @@
                 <div class="accordion-body">
                 <div class="list-group">
                     <a href="fabricantes/visualizar.php" class="list-group-item list-group-item-action" aria-current="true">Fabricantes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Produtos</a>
+                    <a href="produtos/visualizar.php" class="list-group-item list-group-item-action">Produtos</a>
                 </div>
                 </div>
                 </div>
