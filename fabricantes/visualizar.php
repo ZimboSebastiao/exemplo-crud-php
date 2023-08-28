@@ -74,7 +74,7 @@ $quantidade = count($listaDeFabricantes);
 
                           
                         <!-- ===== Excluir ====== -->
-                        <a class="navbar-brand btn btn-outline-secondary apagar" role="button" aria-disabled="true" href="#">
+                        <a class="navbar-brand btn btn-outline-secondary apagar" role="button" aria-disabled="true" href="deletar.php?id=<?=$fabricante["id"]?>&nome=<?=$fabricante["nome"]?>">
                         <img src="../img/excluir.png" width="16" height="15" alt="">
                             Apagar</a>
                     </td>

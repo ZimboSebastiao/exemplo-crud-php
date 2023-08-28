@@ -34,7 +34,7 @@ body {
 
 .botao {
    position: relative;
-   left: 1000px;
+   left: 1080px;
    top: -44px;
    color: #007bff;
    border: 1px solid #007bff;
@@ -75,7 +75,7 @@ body {
 .quanti {
     color: white;
     position: relative;
-    left: 1000px;
+    left: 1280px;
     border: 1px solid white;
 }
 

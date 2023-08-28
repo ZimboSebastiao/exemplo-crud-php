@@ -84,3 +84,22 @@ function atualizarFabricante(PDO $conexao, string $nomeFabricante, int $idFabric
 
 
 }//Fim atualizarFabricante
+
+// Usada em fabricantes/deletar.php
+function deletarFabricante( PDO $conexao, int $idFabricante){
+    $sql = "DELETE FROM fabricantes WHERE id = :id";
+
+    try {
+       $consulta = $conexao->prepare($sql);
+       $consulta->bindValue(":id", $idFabricante, PDO::PARAM_INT);
+       $consulta->execute();
+
+    } catch (Exception $erro) {
+        die("Erro ao carregar: ".$erro->getMessage());
+    } 
+    
+
+} // Fim deletarFabricante
+
+
+
