@@ -24,6 +24,12 @@ body {
     background-color:  #007bff;
 }
 
+
+.container-xxl {
+    width: 100%;
+    max-width: 1920px; /* Largura máxima do contêiner */
+  }
+
 /* ======= FABRICANTES ======== */
 
 .botao {
