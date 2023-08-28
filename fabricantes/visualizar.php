@@ -41,6 +41,14 @@ $quantidade = count($listaDeFabricantes);
                 <p class="hero">Cadastro/Novo Fabricante</p>
                 <h3>Sistema Vendas - Fabricantes</h3>
                 <a class="navbar-brand btn btn-outline-secondary botao" role="button" aria-disabled="true" href="inserir.php"> <img src="../img/adicionar2.png" width="28" height="27" alt="">  Adicionar</a>
+
+                <?php
+                if(isset($_GET["status"]) && $_GET["status"] === "sucesso"){
+                ?>
+                    <h2 style="color: blue;">Fabricante atualizado com sucesso</h2>
+                <?php
+                }
+                ?>
             </div>
             <br>
         </div>

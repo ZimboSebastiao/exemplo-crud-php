@@ -78,7 +78,7 @@ function atualizarFabricante(PDO $conexao, string $nomeFabricante, int $idFabric
         $consulta->bindValue(":id", $idFabricante,  PDO::PARAM_INT);
         $consulta->execute();
     } catch (Exception $erro) {
-        die("Erro ao carregar: ".$erro->getMessage());
+        die("Erro ao atualizar: ".$erro->getMessage());
     }
     
 
