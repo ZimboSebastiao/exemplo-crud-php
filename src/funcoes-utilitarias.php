@@ -7,4 +7,8 @@ $formataPreco = function(float $valor):string{
 
 }; 
 
+function calcularTotal(float $valor, int $qtd):string{
+    $total = $valor * $qtd;
+    return $total;
+}
 ?>
