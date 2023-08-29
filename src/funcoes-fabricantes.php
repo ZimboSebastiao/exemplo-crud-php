@@ -3,7 +3,7 @@ require_once "conecta.php";
 
 // Usada em fabricantes/visualizar.php
 function lerFabricantes(PDO $conexao):array{
-    $sql =  "SELECT * FROM fabricantes ORDER BY id";
+    $sql =  "SELECT * FROM fabricantes ORDER BY nome";
 
     try {
         
