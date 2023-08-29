@@ -43,6 +43,7 @@ $listaDeprodutos = lerProdutos($conexao);
             <p><b>Preço: <?=$formataPreco($produto["Preço"])?></b></p>
             <p><b>Quantidade: <?=$produto["Quantidade"]?></b></p>
             <p><b>Fabricante: <?=$produto["Fabricante"]?></b></p>
+            <p><b>Total: <?=$formataPreco($produto["Preço"] * $produto["Quantidade"])?></b></p>
         </article>
         <?php }?>
 
