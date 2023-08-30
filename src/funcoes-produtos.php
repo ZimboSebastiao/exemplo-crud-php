@@ -11,6 +11,7 @@ function lerProdutos(PDO $conexao):array{
                 produtos.preco AS Preço,
                 produtos.quantidade AS Quantidade,
                 fabricantes.nome AS Fabricante,
+                produtos.descricao AS descricao,
                 (produtos.preco * produtos.quantidade) AS Total
             FROM produtos INNER JOIN fabricantes
             ON produtos.fabricante_id = fabricantes.id
@@ -32,9 +33,28 @@ function inserirProduto(
     string $nome, 
     float $preco, 
     int $quantidade, 
-    int $frabricanteID, 
+    int $frabricanteId, 
     string $descricao):void {
 
-    
+    $sql = "INSERT INTO produtos(
+        nome, preco, quantidade, descricao, fabricante_id) 
+        VALUES (:nome, :preco, :quantidade, :descricao, :fabricanteId
+        )";
+
+        try {
+            $consulta = $conexao->prepare($sql);
+            $consulta->bindValue(":nome", $nome, PDO::PARAM_STR);
+
+            // Ao trabalhar com valores quebrados, para os parâmetros nomeados, você deve usar a constamte PARAM_STR no PDO. No momento, não há outra forma no PDO de lidar com valores deste tipo devidp aos diferentes tipos de dados que cada banco suporta.
+            $consulta->bindValue(":preco", $preco, PDO::PARAM_STR);
+            $consulta->bindValue(":quantidade", $quantidade, PDO::PARAM_INT);
+            $consulta->bindValue(":descricao", $descricao, PDO::PARAM_STR);
+            $consulta->bindValue(":fabricanteId", $frabricanteId, PDO::PARAM_INT);
+
+            $consulta->execute();
+
+        } catch (Exception $erro) {
+            die("Erro ao inserir: ".$erro->getMessage());
+        }
 
 }
