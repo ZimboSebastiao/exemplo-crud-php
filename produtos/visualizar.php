@@ -1,6 +1,6 @@
 <?php require_once "../src/funcoes-produtos.php";
     require_once "../src/funcoes-utilitarias.php";
-
+    
 $listaDeprodutos = lerProdutos($conexao);
 ?>
 <!DOCTYPE html>
@@ -52,6 +52,9 @@ $listaDeprodutos = lerProdutos($conexao);
 
             <!-- Solução 2: Fazer a conta direito na query SQL e pegar o resultado (Coluna Total) alem de passar a formatação-->
             <!-- <p><b>Total: <?=calcularTotal($produto["Preço"] , $produto["Quantidade"])?></b></p> -->
+            <hr>
+            <p><a href="deletar.php?id=<?=$produto["id"]?>">Excluir</a></p>
+            <p><a href="atualizar.php?id=<?=$produto["id"]?>">Editar</a></p>
         </article>
         <?php }?>
 
