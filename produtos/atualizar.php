@@ -1,4 +1,7 @@
 <?php require_once "../src/funcoes-produtos.php";
+require_once "../src/funcoes-fabricantes.php";
+
+$listaDeFabricantes = lerFabricantes($conexao);
 
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $produto = lerUmProduto($conexao, $id);
@@ -34,7 +37,11 @@ $produto = lerUmProduto($conexao, $id);
         <label for="fabricante">Fabricante</label>
             <select required name="fabricante" id="fabricante">
                 <option value=""></option>
-        
+                <?php foreach($listaDeFabricantes as $fabricante){?>
+                    <!--  Chave estrangeira === Chave primaria-->
+                <option <?php if($produto["fabricante_id"] === $fabricante["id"]) echo " selected "?> 
+                value="<?=$fabricante['id']?>"><?=$fabricante['nome']?></option>
+                <?php } ?>
             </select>
         </p>
         <p>
