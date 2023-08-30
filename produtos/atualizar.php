@@ -37,7 +37,8 @@ $produto = lerUmProduto($conexao, $id);
         <label for="fabricante">Fabricante</label>
             <select required name="fabricante" id="fabricante">
                 <option value=""></option>
-                <?php foreach($listaDeFabricantes as $fabricante){?>
+                <?php foreach($listaDeFabricantes as $fabricante){
+                    ?>
                     <!--  Chave estrangeira === Chave primaria-->
                 <option <?php if($produto["fabricante_id"] === $fabricante["id"]) echo " selected "?> 
                 value="<?=$fabricante['id']?>"><?=$fabricante['nome']?></option>
