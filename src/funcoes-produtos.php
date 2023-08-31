@@ -105,3 +105,7 @@ function atualizarProduto(
             die("Erro ao atualizar: ".$erro->getMessage());
         }
 }
+
+function excluirProduto(PDO $conexao, int $id):void{
+    
+}
