@@ -6,6 +6,23 @@ $listaDeFabricantes = lerFabricantes($conexao);
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $produto = lerUmProduto($conexao, $id);
 
+if(isset($_POST['atualizar'])){
+        // Capturando o valor digitado do nome e sanatizando
+        $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+        $preco = filter_input(INPUT_POST, "preco", FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+        $quantidade = filter_input(INPUT_POST, "quantidade", FILTER_SANITIZE_NUMBER_INT);
+
+        // Pegaremos o value, ou seja, o valor do id do fabricante
+        $frabricanteID = filter_input(INPUT_POST, "fabricante", FILTER_SANITIZE_NUMBER_INT);
+        $descricao = filter_input(INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        atualizarProduto(
+            $conexao, $id, $nome, $preco, 
+            $quantidade, $descricao, $frabricanteID);
+    
+    // Redirecionamento
+    header("location:visualizar.php");
+}
 
 ?>
 <!DOCTYPE html>
